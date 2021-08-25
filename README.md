@@ -1,12 +1,14 @@
-# Curso avançado de ReactJS para a Digital Innovation One
+<div align="center">
+  <h1>💻Curso Avançado de ReactJS da DIO</h1>
+</div>
 
-## Aula 01
+## Aula 1️⃣
 
 - [Ciclo de Vida](./life-cycle)
 - [Hooks](./hooks)
 - [Context API](./context-api)
 
-## Aula 02
+## Aula 2️⃣
 
 - [Fragmentos](./fragments)
 - [Error Boundary](./error-boundaries)
@@ -14,11 +16,13 @@
 - [Type Checking](./type-checking)
 - [Refs DOM](./refs-dom)
 
-## Aula 03
+## Aula 3️⃣
 
 - [Dumb Components](./dumb-components)
 - [Smart Components](./smart-components)
 - [Estrutura de projeto](./structure-project)
+
+<hr>
 
 ## Getting Started with Create React App
 
