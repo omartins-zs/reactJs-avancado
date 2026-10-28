@@ -1,3 +1,3 @@
-export const sanitizeString = (str) => console.log('sanitize', str) 
+export const sanitizeString = (str = '') => String(str).trim()
 
-export const removeSpace = (str) => str
+export const removeSpace = (str = '') => String(str).replace(/\s+/g, '')

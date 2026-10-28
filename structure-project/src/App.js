@@ -1,27 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Button, PhotosGallery } from './components'
 import { sanitizeString } from './commons/utils/string'
 
 function App () {
-
   const photos = [
-    'http://placeimg.com/140/60/people',
-    'http://placeimg.com/140/60/animals',
-    'http://placeimg.com/140/60/tech',
-    'http://placeimg.com/140/60/any',
-    'http://placeimg.com/140/60/nature',
+    'https://picsum.photos/seed/people/140/60',
+    'https://picsum.photos/seed/animals/140/60',
+    'https://picsum.photos/seed/tech/140/60',
+    'https://picsum.photos/seed/any/140/60',
+    'https://picsum.photos/seed/nature/140/60',
   ]
 
-  sanitizeString('teste')
+  const title = sanitizeString('Galeria de fotos')
 
   return (
     <>
-     <h1>Galeria de fotos</h1>
-     <PhotosGallery
-        photos={photos}
-     />
-     <Button>
-     </Button>
+      <h1>{title}</h1>
+      <PhotosGallery photos={photos} />
+      <Button onClick={() => {}}>
+        Atualizar Galeria
+      </Button>
     </>
   )
 }

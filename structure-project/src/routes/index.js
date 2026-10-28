@@ -1,7 +1,7 @@
-import Bank from './bank'
-import Users from './users'
+import { bankRouter } from './bank'
 
 export const routes = [
-  ...Bank.
-  ...Users
+  ...bankRouter
 ]
+
+export default routes

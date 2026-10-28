@@ -3,26 +3,23 @@ import Button from './Component/Button'
 import Calc from './Component/Calc'
 
 function App () {
-  
   const [value, setValue] = useState(0)
   const [min, setMin] = useState(0)
-  const [max, setMax] = useState(30)
+  const [max] = useState(30)
 
   const handleClick = () => {
     setMin(10)
   }
 
   const handleCalc = ({ target }) => {
-    const value = target.value
-    setValue(min + max + value)
+    const numericValue = Number(target.value) || 0
+    setValue(min + max + numericValue)
   }
 
   return (
     <>
       <div>
-        <Button
-          onClick={handleClick}
-        >
+        <Button onClick={handleClick}>
           Adicionar no carrinho
         </Button>
       </div>

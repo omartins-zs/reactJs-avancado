@@ -1,5 +1,7 @@
 import Api from './api'
 
-function AddBank (data) {
+export function addBank(data) {
   return Api.addBank(data)
 }
+
+export default addBank

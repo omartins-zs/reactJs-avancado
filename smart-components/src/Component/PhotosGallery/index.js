@@ -5,16 +5,16 @@ function PhotosGallery(props) {
   const { photos } = props
 
   const [gallery, setGallery] = useState(photos)
-  
+
   const handleRemove = (key) => {
-    const newGallery = gallery.filter((img, index) => index !== key) 
+    const newGallery = gallery.filter((img, index) => index !== key)
     setGallery(newGallery)
   }
 
   const renderPhotos = (img, key) => {
     return (
-      <div>
-        <img src={img} />
+      <div key={`photo-${key}`}>
+        <img src={img} alt={`Galeria item ${key + 1}`} />
         <Button onClick={() => handleRemove(key)}>
           Remover {key}
         </Button>

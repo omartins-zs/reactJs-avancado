@@ -3,20 +3,21 @@ import React, { useRef, useEffect, useState } from 'react'
 function App() {
   const inputRef = useRef()
   const count = useRef(1)
-  const [_, setValue] = useState(false)
+  const [, setValue] = useState(false)
 
   const handleClick = () => {
-    inputRef.current.focus()
-    console.log('inputRef.current', inputRef.current)
+    if (inputRef.current) {
+      inputRef.current.focus()
+    }
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      console.log('passou aqui')
+    const timer = setTimeout(() => {
       count.current = 300
       setValue(true)
     }, 3000)
-  })
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <>
@@ -29,4 +30,5 @@ function App() {
     </>
   )
 }
+
 export default App

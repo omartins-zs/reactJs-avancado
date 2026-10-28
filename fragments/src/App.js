@@ -12,18 +12,17 @@ function Column() {
 }
 
 function App() {
-
   const renderColumns = (element, key) => (
     <Fragment key={`column-${key}`}>
       <Column />
     </Fragment>
   )
-  
+
   return (
     <table>
-      
-        {store.map(renderColumns)}        
-      
+      <tbody>
+        {store.map(renderColumns)}
+      </tbody>
     </table>
   )
 }
